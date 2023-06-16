@@ -1,0 +1,16 @@
+.header {
+  height: 100vh;
+  background-image: url(../images/suicideboys-2022-cr-Max-Beck-billboard-1548.png);
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo{
+    width: 850px;
+    height: auto;
+    margin-top: 40%;
+}
+.btn{
+    align-items: center;
+}

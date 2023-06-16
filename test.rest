@@ -1,0 +1,10 @@
+### POST USERS
+POST http://localhost:8080/users/add
+Content-Type: application/json
+
+{
+    "username":"halaman",
+    "password":"63ec84f4ab9be5b8a8cb1ed3",
+    "first_name":"halaman",
+    "last_name":"63ec84f4ab9be5b8a8cb1ed3"
+}
