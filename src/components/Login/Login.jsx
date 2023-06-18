@@ -50,7 +50,7 @@ const Login = () => {
               </video>
             </div>
           </div>
-          <div className="col-md-6 left-box">
+          <div className="col-md-6 right-box">
             <form className="row align-items-center" onSubmit={handleSubmit}>
               <div className="header-text mb-4">
                 <h2>Welcome back</h2>
@@ -65,6 +65,7 @@ const Login = () => {
                   onChange={handleChange}
                   value={data.username}
                   required
+                  autoComplete="off"
                 />
               </div>
               <div className="input-group mb-1">

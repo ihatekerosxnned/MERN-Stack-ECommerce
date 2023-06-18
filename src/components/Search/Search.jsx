@@ -87,8 +87,8 @@ function Search() {
             <div className="card">
               <img
                 src={`http://localhost:8080/uploads/${product.image}`}
-                alt="halaman"
-                className="w-100"
+                alt="gago"
+                className="h-100"
               />
               <div className="mask">
                 <div className="d-flex justify-content-start align-items-end h-100">

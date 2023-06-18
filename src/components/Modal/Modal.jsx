@@ -34,13 +34,18 @@ function Modal({ formData, handleChange, handleFileChange, hide, update }) {
   return (
     <div className="modal show fade" style={{ display: "block", backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
       <div className="modal-dialog">
-        <div className="modal-content">
+        <div className="modal-content w-100">
           <div className="modal-header">
             <h5 className="modal-title">Update Product</h5>
             <button type="button" className="btn-close" onClick={hide}></button>
           </div>
-          <div className="modal-body">
-            <form onSubmit={handleSubmit} className="w-50 center m-auto">
+          <div className="modal-body"> 
+            <form onSubmit={handleSubmit} className="w-75 center m-auto">
+            <img
+                src={`http://localhost:8080/uploads/${updatedFormData.image}`}
+                alt="gago"
+                className="w-100 h-auto m-auto"
+              /> 
               <div>
                 <input
                   type="text"
@@ -108,7 +113,7 @@ function Modal({ formData, handleChange, handleFileChange, hide, update }) {
               </div>
               <div>
             <select
-              name="product_category"
+              name="status"
               value={updatedFormData.status}
               onChange={handleInputChange}
               className="form-control mb-3"

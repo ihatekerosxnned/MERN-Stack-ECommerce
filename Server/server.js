@@ -32,5 +32,5 @@ app.use('/auth',authRouter);
 
 app.listen(8080, () => {
     console.log('Server Connected!')
-    console.log('Ari nasa miss mo na siya!')
+    console.log('Ari nasa!')
 });

@@ -8,10 +8,18 @@ function Navbar() {
   const onClickDisplay = () => {
     window.location = "/displayproducts";
   };
+  const onClickUserAdd = () =>{
+    window.location = "/useradd";
+  };
+  const onClickUserDisplay = () => {
+    window.location = "/userdisplay";
+  };
   const handleLogout = () => {
     localStorage.removeItem("token");
+    window.location.reload();
     alert("Logging out!");
     window.location.reload();
+    window.location="/";
   };
 
   return (
@@ -85,6 +93,21 @@ function Navbar() {
                 class="dropdown-item"
               >
                 Display Products
+              </Link>
+            </li>
+            <li>
+              <Link to="/add" class="dropdown-item"
+              onClick={onClickUserAdd}>
+                Add User
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/userdisplay"
+                onClick={onClickUserDisplay}
+                class="dropdown-item"
+              >
+                Display Users
               </Link>
             </li>
             <li>

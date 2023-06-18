@@ -14,6 +14,8 @@ import Add from "./components/Add/Add";
 import Search from "./components/Search/Search";
 import DisplayShirts from "./components/DisplayShirts/DisplayShirts";
 import DisplayShorts from "./components/DisplayShorts/DisplayShorts";
+import UserAdd from "./components/UserAdd/UserAdd";
+import UserDisplay from "./components/UserDisplay/UserDisplay";
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
       <Route path="/displayshirts" exact element={<DisplayShirts/>} />
       <Route path="/displayshorts" exact element={<DisplayShorts/>} />
       <Route path="/displaydetails/:productId" exact element={<DisplayDetails/>} />
+      <Route path="/userdisplay" exact element={<UserDisplay/>} />
+      <Route path="/useradd" exact element={<UserAdd/>} />
       <Route path="/add" exact element={<Add/>} />
       <Route path="/search" exact element={<Search/>} />
       <Route path="/" exact element={<Navigate replace to="/login"/>} />

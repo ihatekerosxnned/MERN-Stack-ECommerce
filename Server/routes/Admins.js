@@ -27,4 +27,28 @@ router.post("/", async(req,res)=>{
     }
 });
 
+router.get('/display', async (req, res) => {
+    try {
+      const admins = await Admin.find();
+      res.status(200).json(admins);
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  });
+
+  //DELETE PRODUCT BY ID
+  router.delete('/delete/:id', async(req,res)=>{
+    try{
+        const deletedAdmin = await
+        Admin.findByIdAndDelete(req.params.id);
+        if(!deletedAdmin){
+        return res.status(404).json({message: 'Admin not Found'});
+        }
+        res.json({message: 'Deletedd an Admin', admin:deletedAdmin});
+    }
+    catch(err){
+        res.status(500).json({message: err.message});
+    }
+});
+
 module.exports = router;

@@ -69,101 +69,113 @@ function Add() {
     <>
       <Navbar />
       <div className="container mt-2">
-        
-        <form onSubmit={handleSubmit} className="w-50 center m-auto">
-        <h2 className="m-auto text-align-center mb-3">Add Product</h2>
-          <div>
-            <input
-              type="text"
-              name="product_name"
-              value={formData.product_name}
-              onChange={handleChange}
-              placeholder="Product Name"
-              class="form-control mb-3"
-            />
+        <div className="container d-flex justify-content-center align-items-center min-vh-100">
+          <div className="row border rounded-5 p-3 bg-white shadow box-area w-50">
+            <div className="col-md right-box">
+              <form className="row align-items-center" onSubmit={handleSubmit}>
+                <div className="header-text mb-4">
+                  <h2>Add Product</h2>
+                </div>
+                <div className="input-group mb-3">
+                  <input
+                    type="text"
+                    name="product_name"
+                    value={formData.product_name}
+                    onChange={handleChange}
+                    placeholder="Product Name"
+                    class="form-control mb-3"
+                  />
+                </div>
+                <div className="input-group mb-3">
+                  <input
+                    type="text"
+                    name="product_code"
+                    value={formData.product_code}
+                    onChange={handleChange}
+                    placeholder="Product Code"
+                    class="form-control mb-3"
+                  />
+                </div>
+                <div className="input-group mb-3">
+                  <select
+                    name="product_category"
+                    value={formData.product_category}
+                    onChange={handleChange}
+                    className="form-control mb-3"
+                    placeholder="Select Category"
+                  >
+                    {categoryOptions.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="input-group mb-3">
+                  <input
+                    type="text"
+                    name="product_description"
+                    value={formData.product_description}
+                    onChange={handleChange}
+                    placeholder="Product Description"
+                    class="form-control mb-3"
+                  />
+                </div>
+                <div className="input-group mb-3">
+                  <input
+                    type="text"
+                    name="product_price"
+                    value={formData.product_price}
+                    onChange={handleChange}
+                    placeholder="Product Price"
+                    class="form-control mb-3"
+                  />
+                </div>
+                <div className="input-group mb-3">
+                  <input
+                    type="text"
+                    name="sku"
+                    value={formData.sku}
+                    onChange={handleChange}
+                    placeholder="SKU"
+                    class="form-control mb-3"
+                  />
+                </div>
+                <div className="input-group mb-3">
+                  <select
+                    name="status"
+                    value={formData.status}
+                    onChange={handleChange}
+                    className="form-control mb-3"
+                    placeholder="Select Status"
+                  >
+                    {statusOptions.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="input-group mb-3">
+                  <input
+                    type="file"
+                    name="image"
+                    onChange={handleFileChange}
+                    class="form-control mb-3"
+                  />
+                </div>
+                <div className="input-group mb-3 mt-1">
+                  <button
+                    type="submit"
+                    className="btn btn-lg btn-primary w-100 fs-6"
+                  >
+                    Add Product
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-          <div>
-            <input
-              type="text"
-              name="product_code"
-              value={formData.product_code}
-              onChange={handleChange}
-              placeholder="Product Code"
-              class="form-control mb-3"
-            />
-          </div>
-          <div>
-            <select
-              name="product_category"
-              value={formData.product_category}
-              onChange={handleChange}
-              className="form-control mb-3"
-              placeholder="Select Category"
-            >
-              {categoryOptions.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <input
-              type="text"
-              name="product_description"
-              value={formData.product_description}
-              onChange={handleChange}
-              placeholder="Product Description"
-              class="form-control mb-3"
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              name="product_price"
-              value={formData.product_price}
-              onChange={handleChange}
-              placeholder="Product Price"
-              class="form-control mb-3"
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              name="sku"
-              value={formData.sku}
-              onChange={handleChange}
-              placeholder="SKU"
-              class="form-control mb-3"
-            />
-          </div>
-          <div>
-            <select
-              name="status"
-              value={formData.status}
-              onChange={handleChange}
-              className="form-control mb-3"
-              placeholder="Select Status"
-            >
-              {statusOptions.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <input
-              type="file"
-              name="image"
-              onChange={handleFileChange}
-              class="form-control mb-3"
-            />
-          </div>
-          <button type="submit" class="btn btn-primary mb-3">
-            Submit
-          </button>
-        </form>
+        </div>
       </div>
     </>
   );
